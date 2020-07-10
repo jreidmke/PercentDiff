@@ -7,7 +7,11 @@ function percentDiff(a, b) {
     const c = b - a;
     const apnd = c > 0 ? '% increase' : '% decrease'
     const diff = a / 100;
-    return Math.abs(c/diff).toFixed(2) + apnd;
+    if(Number.isInteger(Math.abs(c/diff))) {
+        return Math.abs(c/diff) + apnd;
+    } else {
+        return Math.abs(c/diff).toFixed(2) + apnd;
+    }
 }
 
 
