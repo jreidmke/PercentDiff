@@ -10,7 +10,12 @@ function percentDiff(a, b) {
     return Math.abs(c/diff).toFixed(2) + apnd;
 }
 
+
 btn.addEventListener('click', function(e) {
-    result.innerText = percentDiff(percentOne.value, percentTwo.value);
+    if(!percentTwo.value || !percentOne.value) {
+        result.innerText = "Please enter numbers in both fields."
+    } else {
+        result.innerText = percentDiff(percentOne.value, percentTwo.value);
+    }
     e.preventDefault();
 });
