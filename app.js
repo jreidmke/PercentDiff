@@ -2,6 +2,7 @@ let percentOne = (document.getElementById('percentOne'));
 let percentTwo = document.getElementById('percentTwo');
 const btn = document.getElementById("submit");
 const result = document.getElementById('result');
+const swap = document.querySelector('swap');
 
 function percentDiff(a, b) {
     const c = b - a;
